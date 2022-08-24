@@ -11,7 +11,9 @@ function Header() {
   return (
     <div className="headerWrapper">
       <div className="header">
-        <img src={logo} alt="" />
+        <Link to={"/"} style={{ cursor: "pointer" }}>
+          <img src={logo} alt="" />
+        </Link>
         <div className={`right-header ${header && "open-header"}`}>
           <FontAwesomeIcon
             onClick={() => setHeader(false)}

@@ -79,7 +79,15 @@ export default function TrackingInformation() {
                 <h1>1.00</h1>
 
                 <span>
-                  <img src={copy} alt="Copy" /> 0x3d007F2AC...6De
+                  <img
+                    onClick={() => {
+                      navigator.clipboard.writeText("0x3d007F2AC...6De");
+                    }}
+                    style={{ cursor: "pointer" }}
+                    src={copy}
+                    alt="Copy"
+                  />{" "}
+                  0x3d007F2AC...6De
                 </span>
               </div>
             </div>
@@ -98,7 +106,15 @@ export default function TrackingInformation() {
                 <h1>0.9779601</h1>
 
                 <span>
-                  <img src={copy} alt="Copy" /> 0x1Fbd8f970...D0f0
+                  <img
+                    onClick={() => {
+                      navigator.clipboard.writeText("0x1Fbd8f970...D0f0");
+                    }}
+                    style={{ cursor: "pointer" }}
+                    src={copy}
+                    alt="Copy"
+                  />{" "}
+                  0x1Fbd8f970...D0f0
                 </span>
               </div>
             </div>
@@ -112,7 +128,15 @@ export default function TrackingInformation() {
                 <span> Houdini ID:</span>
 
                 <h1>
-                  6Y5...ZdH <img src={copy} alt="Copy" />
+                  6Y5...ZdH{" "}
+                  <img
+                    onClick={() => {
+                      navigator.clipboard.writeText("6Y5...ZdH");
+                    }}
+                    style={{ cursor: "pointer" }}
+                    src={copy}
+                    alt="Copy"
+                  />
                 </h1>
               </div>
 
