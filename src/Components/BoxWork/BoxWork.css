@@ -1,0 +1,30 @@
+.box-work {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(129, 129, 129, 0.25);
+  backdrop-filter: blur(25px);
+  border-radius: 18px;
+  padding: 20px;
+  height: 300px;
+  min-width: 320px;
+}
+.box-work img {
+  max-width: 76px;
+  height: 76px;
+  align-self: flex-end;
+  object-fit: contain;
+}
+.box-work h1 {
+  font-weight: 500;
+  font-size: 42px;
+}
+.box-work p {
+  font-weight: 500;
+  font-size: 18px;
+  opacity: 0.5;
+  max-width: 280px;
+  line-height: 26px;
+}

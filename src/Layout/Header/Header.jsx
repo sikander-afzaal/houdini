@@ -30,7 +30,7 @@ function Header() {
             onClick={() => {
               setHeader(false);
             }}
-            to={"/"}
+            to={"/works"}
           >
             How it works
           </Link>
