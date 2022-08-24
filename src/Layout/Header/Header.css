@@ -6,6 +6,10 @@
   padding-inline: 20px;
   height: 155px;
 }
+.header img {
+  max-width: 209px;
+  object-fit: contain;
+}
 .header {
   max-width: 1400px;
   width: 100%;
