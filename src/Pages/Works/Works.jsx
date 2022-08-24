@@ -1,6 +1,7 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import ReviewBox from "../../Components/ReviewBox/ReviewBox";
 import "./Works.css";
 import img from "../../Assets/works/works-bg.png";
 import imgMob from "../../Assets/works/mob-bg.png";
@@ -11,6 +12,10 @@ import box4 from "../../Assets/works/box (4).png";
 import BoxWork from "../../Components/BoxWork/BoxWork";
 import atom from "../../Assets/works/atom.png";
 import shine from "../../Assets/works/shine.png";
+import review1 from "../../Assets/works/review (1).png";
+import review2 from "../../Assets/works/review (2).png";
+import review3 from "../../Assets/works/review (3).png";
+
 function Works() {
   return (
     <div className="homeWrapper">
@@ -132,6 +137,67 @@ function Works() {
             </p>
           </div>
           <img src={atom} className="shine" alt="" />
+        </div>
+        <div className="reviews">
+          <h2 className="small-head">What people are saying</h2>
+          <h1 className="head">Testimonials.</h1>
+          <Splide
+            className="review-slider"
+            options={{
+              width: "90%",
+              perPage: 3,
+              perMove: 1,
+              drag: true,
+              pagination: false,
+              arrows: true,
+              type: "loop",
+              gap: "20px",
+              breakpoints: {
+                1080: {
+                  perPage: 2,
+                },
+                740: {
+                  perPage: 1,
+                  arrows: false,
+                  pagination: true,
+                },
+              },
+            }}
+          >
+            <SplideSlide>
+              <ReviewBox
+                para={[
+                  "HoudiniSwap gives me power! I did the KYC with Binance, so they know who I am. The government could always audit them to find all of my trades.",
+                  "I just HoudiniSwap out of Binance and into a Trust wallet. Poof! I now feel like a true crypto basement warrior, thank you!",
+                ]}
+                name={"J. Mathew"}
+                img={review1}
+                stars={5}
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <ReviewBox
+                para={[
+                  "Feels amazing to be free! I made 100+ trades last month, which could all be tied back to my gov’t ID from Crypto.com.",
+                  "Now, I HoudiniSwap out my KYC coins from Crypto.com into a MetaMask wallet so my trades are not tied to my IRL identity. Bye bye taxman. Everyone should be doing this!",
+                ]}
+                name={"Lara Sam"}
+                img={review2}
+                stars={5}
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <ReviewBox
+                para={[
+                  "Honestly f**k the government. I feel like I’m part of a quiet revolution whenever I use HoudiniSwap.",
+                  "I totally agree that anonymity and crypto should go hand in hand. You guys rock.",
+                ]}
+                name={"Smith James"}
+                img={review3}
+                stars={5}
+              />
+            </SplideSlide>
+          </Splide>
         </div>
       </div>
     </div>
