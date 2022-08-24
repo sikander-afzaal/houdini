@@ -24,7 +24,7 @@ function Works() {
       <div className="works">
         <div className="top-works">
           <h2 className="small-head">How it works</h2>
-          <h1 className="head">
+          <h1 className="head weight-400">
             First ever <br /> conduit system.
           </h1>
           <div className="row-works">
@@ -110,7 +110,7 @@ function Works() {
           <img src={shine} className="shine" alt="" />
           <div className="right-section">
             <h2 className="small-head">Why this works</h2>
-            <h1 className="head">Trusted by millions.</h1>
+            <h1 className="head weight-400">Trusted by millions.</h1>
             <p>
               When a Monero transaction is sent, there is no way to see the
               sending party, receiving party, nor the transaction value.
