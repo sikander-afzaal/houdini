@@ -16,6 +16,7 @@ import review1 from "../../Assets/works/review (1).png";
 import review2 from "../../Assets/works/review (2).png";
 import review3 from "../../Assets/works/review (3).png";
 import blob from "../../Assets/tracking-illustration.png";
+import blobMob from "../../Assets/mob-ill.png";
 
 function Works() {
   return (
@@ -141,6 +142,7 @@ function Works() {
         </div>
         <div className="reviews">
           <img src={blob} alt="" className="blob" />
+          <img src={blobMob} alt="" className="blob-mob" />
           <h2 className="small-head">What people are saying</h2>
           <h1 className="head">Testimonials.</h1>
           <Splide

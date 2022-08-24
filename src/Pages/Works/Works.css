@@ -96,6 +96,10 @@
   right: 78%;
   z-index: -1;
   bottom: 38%;
+  display: block;
+}
+.blob-mob {
+  display: none;
 }
 .review-slider {
   margin-top: 80px;
@@ -212,5 +216,17 @@
   .blob {
     max-width: 50%;
     bottom: 60%;
+  }
+  .blob {
+    display: none;
+  }
+  .blob-mob {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    mix-blend-mode: luminosity;
+    display: block;
+    max-width: 100%;
+    z-index: -1;
   }
 }
