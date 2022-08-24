@@ -88,6 +88,14 @@
   margin-top: 120px;
   flex-direction: column;
   width: 100%;
+  position: relative;
+}
+.blob {
+  position: absolute;
+  mix-blend-mode: luminosity;
+  right: 78%;
+  z-index: -1;
+  bottom: 38%;
 }
 .review-slider {
   margin-top: 80px;
@@ -146,6 +154,10 @@
     max-width: 500px;
     width: 100%;
   }
+  .blob {
+    max-width: 40%;
+    bottom: 50%;
+  }
 }
 @media screen and (max-width: 723px) {
   .review-slider {
@@ -196,5 +208,9 @@
     top: 105%;
     width: 100% !important;
     gap: 20px !important;
+  }
+  .blob {
+    max-width: 50%;
+    bottom: 60%;
   }
 }

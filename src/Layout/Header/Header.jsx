@@ -56,7 +56,7 @@ function Header() {
                 onClick={() => {
                   setHeader(false);
                 }}
-                to={"/"}
+                to={"/stake"}
               >
                 Stake $POOF
               </Link>

@@ -15,6 +15,7 @@ import shine from "../../Assets/works/shine.png";
 import review1 from "../../Assets/works/review (1).png";
 import review2 from "../../Assets/works/review (2).png";
 import review3 from "../../Assets/works/review (3).png";
+import blob from "../../Assets/tracking-illustration.png";
 
 function Works() {
   return (
@@ -139,6 +140,7 @@ function Works() {
           <img src={atom} className="shine" alt="" />
         </div>
         <div className="reviews">
+          <img src={blob} alt="" className="blob" />
           <h2 className="small-head">What people are saying</h2>
           <h1 className="head">Testimonials.</h1>
           <Splide

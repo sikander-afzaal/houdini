@@ -5,6 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import bnb from "../../Assets/bnb.png";
 import eth from "../../Assets/eth.png";
 import ADA from "../../Assets/ADA.png";
@@ -260,13 +261,15 @@ function Home() {
           </div>
           <div className="recieve">
             <h2>Receiving Wallet (ETH) Address:</h2>
-            <h1>0x</h1>
+            <input type="text" placeholder="0x" />
           </div>
           <p className="note">
             *Only send from wallets. Transactions sent from a Smart Contract are
             not accepted.
           </p>
-          <button className="swap-btn">Swap</button>
+          <Link className="swap-btn" to="/track">
+            Swap
+          </Link>
         </div>
       </div>
     </div>
