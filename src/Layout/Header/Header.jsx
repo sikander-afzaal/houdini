@@ -18,21 +18,56 @@ function Header() {
             className="close"
             icon={faXmark}
           />
-          <Link to={"/"}>Swap</Link>
-          <Link to={"/"}>How it works</Link>
+          <Link
+            onClick={() => {
+              setHeader(false);
+            }}
+            to={"/"}
+          >
+            Swap
+          </Link>
+          <Link
+            onClick={() => {
+              setHeader(false);
+            }}
+            to={"/"}
+          >
+            How it works
+          </Link>
           <div
             className={`drop-down`}
             onClick={() => {
               setOpenDrop((prev) => !prev);
             }}
           >
-            <Link to={"/"}>
+            <p>
               $POOF <FontAwesomeIcon icon={faChevronDown} />
-            </Link>
+            </p>
             <div className={`main-drop ${openDrop && "open-drop"}`}>
-              <Link to={"/"}>Buy $POOF</Link>
-              <Link to={"/"}>Stake $POOF</Link>
-              <Link to={"/"}>About the Coin</Link>
+              <Link
+                onClick={() => {
+                  setHeader(false);
+                }}
+                to={"/"}
+              >
+                Buy $POOF
+              </Link>
+              <Link
+                onClick={() => {
+                  setHeader(false);
+                }}
+                to={"/"}
+              >
+                Stake $POOF
+              </Link>
+              <Link
+                onClick={() => {
+                  setHeader(false);
+                }}
+                to={"/"}
+              >
+                About the Coin
+              </Link>
             </div>
           </div>
         </div>
