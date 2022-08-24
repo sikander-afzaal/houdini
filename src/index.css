@@ -3,6 +3,13 @@
   src: url("./Assets/font/Gilroy-ExtraBold.otf");
   font-weight: 700;
 }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./Assets/font/Gilroy-ExtraBold.otf");
+  font-weight: 600;
+}
+
 @font-face {
   font-family: "Gilroy";
   src: url("./Assets/font/Gilroy-Light.otf");
