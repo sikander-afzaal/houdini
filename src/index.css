@@ -12,6 +12,9 @@
 body {
   background-color: black;
 }
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;

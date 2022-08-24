@@ -11,7 +11,7 @@ function Footer() {
         <img src={img} alt="" />
         <div className="row">
           <Link to={"/"}>Swap</Link>
-          <Link to={"/"}>How it works</Link>
+          <Link to={"/works"}>How it works</Link>
           <Link to={"/"}>Buy $POOF</Link>
           <Link to={"/"}>Stake $POOF</Link>
           <Link to={"/"}>About the coin</Link>
