@@ -23,6 +23,7 @@ import review2 from "../../Assets/works/review (2).png";
 import review3 from "../../Assets/works/review (3).png";
 import blob from "../../Assets/tracking-illustration.png";
 import step3 from "../../Assets/step3.svg";
+import step1 from "../../Assets/step1.svg";
 import blobMob from "../../Assets/mob-ill.png";
 
 function Works() {
@@ -250,7 +251,7 @@ function Works() {
           <div className="right-steps">
             {steps === 0 && (
               <div className="bg-purple">
-                <img src={step3} alt="" />
+                <img src={step1} alt="" />
               </div>
             )}
             {steps === 1 && (
