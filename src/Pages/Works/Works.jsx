@@ -30,36 +30,31 @@ function Works() {
   const STEPS__DATA = [
     {
       step: "Step 1",
-      head: "How To Swap",
-      desc: "Easy and Secure",
-    },
-    {
-      step: "Step 2",
       head: "Choose the crypto swap pair",
       desc: "Choose between any combination of cryptos.",
     },
     {
-      step: "Step 3",
+      step: "Step 2",
       head: "Input the amount to swap",
       desc: "Wait while HoudiniSwap gathers rates from multiple exchanges and optimizes for the lowest cost.",
     },
     {
-      step: "Step 4",
+      step: "Step 3",
       head: "Input the receiving wallet address",
       desc: "The receiving wallet address should match the address format of the receiving currency. For example, ETH address start with 0x...",
     },
     {
-      step: "Step 5",
+      step: "Step 4",
       head: "Send funds to address generated",
       desc: "Open your personal wallet and send the funds to the address generated on the Order Page. For enhanced security, HoudiniSwap does not utilize a wallet connect.",
     },
     {
-      step: "Step 6",
+      step: "Step 5",
       head: "Done!",
       desc: "On average, it takes 20-minutes for a swap to complete. Follow along progress on the Order Page.",
     },
     {
-      step: "Step 7",
+      step: "Step 6",
       head: "Still need help? Contact support.",
       desc: "Our support team is available 24/7. Contact us anytime with questions, feedback, or ideas!",
     },
@@ -74,7 +69,7 @@ function Works() {
           return prev + 1;
         });
       }
-    }, 4000);
+    }, 5000);
     return () => {
       clearInterval(timer);
     };
@@ -201,93 +196,96 @@ function Works() {
           </div>
           <img src={atom} className="shine" alt="" />
         </div>
-
-        <div className="steps-div">
-          <div className="left-steps">
-            <div className="steps-desc">
-              {/* <h3>{STEPS__DATA[steps].step}</h3> */}
-              <h2 className="small-head">{STEPS__DATA[steps].head}</h2>
-              <p>{STEPS__DATA[steps].desc}</p>
-            </div>
-            <div className="pagination">
-              {STEPS__DATA.map((elem, idx) => {
-                return (
-                  <div
-                    onClick={() => setSteps(idx)}
-                    key={idx + "pagination"}
-                    className={`page ${steps === idx ? "active-page" : ""}`}
-                  ></div>
-                );
-              })}
-            </div>
-            <div className="navigation">
-              <FontAwesomeIcon
-                onClick={() =>
-                  setSteps((prev) => {
-                    if (prev === 0) {
-                      return 6;
-                    } else {
-                      return prev - 1;
-                    }
-                  })
-                }
-                icon={faChevronLeft}
-              />
-              <p>
-                {steps + 1}/{STEPS__DATA.length}
-              </p>
-              <FontAwesomeIcon
-                onClick={() =>
-                  setSteps((prev) => {
-                    if (prev === 6) {
-                      return 0;
-                    } else {
-                      return prev + 1;
-                    }
-                  })
-                }
-                icon={faChevronRight}
-              />
-            </div>
+        <div className="flex-col">
+          <div>
+            <h2 className="small-head">How To Swap</h2>
+            <h1 className="head">Easy and Secure</h1>
           </div>
-          <div className="right-steps">
-            {steps === 0 && (
-              <div className="bg-purple">
-                <img src={step1} alt="" />
+          <div className="steps-div">
+            <div className="left-steps">
+              <div className="steps-desc">
+                {/* <h3>{STEPS__DATA[steps].step}</h3> */}
+                <h2 className="small-head">{STEPS__DATA[steps].head}</h2>
+                <p>{STEPS__DATA[steps].desc}</p>
               </div>
-            )}
-            {steps === 1 && (
-              <div className="bg-purple">
-                <img src={step3} alt="" />
+              <div className="pagination">
+                {STEPS__DATA.map((elem, idx) => {
+                  return (
+                    <div
+                      onClick={() => setSteps(idx)}
+                      key={idx + "pagination"}
+                      className={`page ${steps === idx ? "active-page" : ""}`}
+                    >
+                      <div onClick={() => setSteps(idx)}></div>
+                    </div>
+                  );
+                })}
               </div>
-            )}
-            {steps === 2 && (
-              <div className="bg-purple">
-                <img src={step3} alt="" />
+              <div className="navigation">
+                <FontAwesomeIcon
+                  onClick={() =>
+                    setSteps((prev) => {
+                      if (prev === 0) {
+                        return 5;
+                      } else {
+                        return prev - 1;
+                      }
+                    })
+                  }
+                  icon={faChevronLeft}
+                />
+                <p>
+                  {steps + 1}/{STEPS__DATA.length}
+                </p>
+                <FontAwesomeIcon
+                  onClick={() =>
+                    setSteps((prev) => {
+                      if (prev === 5) {
+                        return 0;
+                      } else {
+                        return prev + 1;
+                      }
+                    })
+                  }
+                  icon={faChevronRight}
+                />
               </div>
-            )}
-            {steps === 3 && (
-              <div className="bg-purple">
-                <img src={step3} alt="" />
-              </div>
-            )}
-            {steps === 4 && (
-              <div className="bg-purple">
-                <img src={step3} alt="" />
-              </div>
-            )}
-            {steps === 5 && (
-              <div className="bg-purple">
-                <img src={step3} alt="" />
-              </div>
-            )}
-            {steps === 6 && (
-              <div className="bg-purple">
-                <img src={step3} alt="" />
-              </div>
-            )}
+            </div>
+            <div className="right-steps">
+              {steps === 0 && (
+                <div className="bg-purple">
+                  <img src={step1} alt="" />
+                </div>
+              )}
+              {steps === 1 && (
+                <div className="bg-purple">
+                  <img src={step3} alt="" />
+                </div>
+              )}
+              {steps === 2 && (
+                <div className="bg-purple">
+                  <img src={step3} alt="" />
+                </div>
+              )}
+              {steps === 3 && (
+                <div className="bg-purple">
+                  <img src={step3} alt="" />
+                </div>
+              )}
+              {steps === 4 && (
+                <div className="bg-purple">
+                  <img src={step3} alt="" />
+                </div>
+              )}
+              {steps === 5 && (
+                <div className="bg-purple">
+                  <img src={step3} alt="" />
+                </div>
+              )}
+            </div>
           </div>
         </div>
+
         <div className="reviews">
           <img src={blob} alt="" className="blob" />
           <img src={blobMob} alt="" className="blob-mob" />
