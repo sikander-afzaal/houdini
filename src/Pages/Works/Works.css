@@ -35,7 +35,7 @@
 }
 .head {
   font-weight: 400;
-  font-size: 70px;
+  font-size: 48px;
   line-height: 75px;
 }
 .row-works {
@@ -80,7 +80,7 @@
 }
 .right-section p {
   margin-top: 30px;
-  font-size: 24px;
+  font-size: 18px;
   opacity: 0.5;
   font-weight: 500;
 }
@@ -192,7 +192,7 @@
   top: 0;
   position: absolute;
   z-index: 4;
-  animation: fill 5s ease-in-out forwards;
+  animation: fill 10s ease-in-out forwards;
 }
 @keyframes fill {
   from {
@@ -235,7 +235,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: anim-right 1s ease 0s forwards;
+  animation: anim-right 1.5s ease 0s forwards;
 }
 .bg-purple img {
   width: 100%;
@@ -256,14 +256,15 @@
 .flex-col {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   width: 100%;
-  margin: 100px 0px;
+  margin-bottom: 100px;
+  margin-top: 0px;
   gap: 100px;
 }
 .flex-col > div:first-of-type {
-  text-align: center;
+  text-align: left;
 }
 .page > div {
   background-color: transparent;
@@ -403,8 +404,7 @@
     z-index: -1;
   }
   .flex-col {
-    margin-top: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     gap: 50px;
   }
 
