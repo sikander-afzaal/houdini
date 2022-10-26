@@ -205,14 +205,16 @@ function Works() {
         <div className="steps-div">
           <div className="left-steps">
             <div className="steps-desc">
-              <h3>{STEPS__DATA[steps].step}</h3>
-              <h2>{STEPS__DATA[steps].head}</h2>
+              {/* <h3>{STEPS__DATA[steps].step}</h3> */}
+              <h2 className="small-head">{STEPS__DATA[steps].head}</h2>
               <p>{STEPS__DATA[steps].desc}</p>
             </div>
             <div className="pagination">
               {STEPS__DATA.map((elem, idx) => {
                 return (
                   <div
+                    onClick={() => setSteps(idx)}
+                    key={idx + "pagination"}
                     className={`page ${steps === idx ? "active-page" : ""}`}
                   ></div>
                 );
