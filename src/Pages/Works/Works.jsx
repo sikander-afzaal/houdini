@@ -79,32 +79,30 @@ function Works() {
     <div className="homeWrapper">
       <div className="works">
         <div className="top-works">
-          <h2 className="small-head">How it works</h2>
-          <h1 className="head weight-400">
-            First ever <br /> conduit system.
-          </h1>
+          <h2 className="small-head">What Happens Under The Hood</h2>
+          <h1 className="head weight-400">First ever conduit system.</h1>
           <div className="row-works">
             <BoxWork
               title={"Swap"}
               desc={
-                "Anonymizes your crypto by swapping it first to Monero on Exchange A."
+                "Anonymizes your crypto by swapping it first to Monero on Exchange A"
               }
               img={box1}
             />
             <BoxWork
-              title={"Anonymity"}
+              title={"Anonymize"}
               desc={"Send your anonymous Monero to Exchange B"}
               img={box2}
             />
             <BoxWork
-              title={"POOF"}
+              title={"Poof"}
               desc={
                 "Swaps the Monero on Exchange B to your desired receiving currency"
               }
               img={box3}
             />
             <BoxWork
-              title={"Privacy"}
+              title={"Secure"}
               desc={
                 "Sends receiving currency to your desired wallet, breaking all links between the sender and receiver"
               }
@@ -128,7 +126,7 @@ function Works() {
               <BoxWork
                 title={"Swap"}
                 desc={
-                  "Anonymizes your crypto by swapping it first to Monero on Exchange A."
+                  "Anonymizes your crypto by swapping it first to Monero on Exchange A"
                 }
                 img={box1}
               />
@@ -181,17 +179,17 @@ function Works() {
         <div className="work-section">
           <div className="right-section">
             <h2 className="small-head">Why we built this</h2>
-            <h1 className="head">Decentralization.</h1>
+            <h1 className="head">Privacy is Security.</h1>
             <p>
-              Decentralization and anonymity should go hand-in-hand. Why should
-              everyone be able to track where you earn your money and where it
-              is spent?
+              Why should everyone be able to track where you earn your money and
+              where it is spent? Not only is that feature of blockchain
+              intrusive, it's also dangerous.
               <br />
               <br />
-              Karen across the street doesn’t have access to view your bank
-              account, so why should crypto be any different! HoudiniSwap makes
-              it easy to swap transactions between wallets without a trace. Bye
-              bye nosy neighbors!
+              You don't walk around with a name tag of your net worth in real
+              life, so why should crypto be any different? HoudiniSwap makes it
+              easy to swap transactions between wallets without a trace. Welcome
+              to the next evolution of crypto transactions.
             </p>
           </div>
           <img src={atom} className="shine" alt="" />
@@ -290,7 +288,7 @@ function Works() {
           <img src={blob} alt="" className="blob" />
           <img src={blobMob} alt="" className="blob-mob" />
           <h2 className="small-head">What people are saying</h2>
-          <h1 className="head">Testimonials.</h1>
+          <h1 className="head">Testimonials</h1>
           <Splide
             className="review-slider"
             options={{
@@ -316,22 +314,16 @@ function Works() {
           >
             <SplideSlide>
               <ReviewBox
-                para={[
-                  "HoudiniSwap gives me power! I did the KYC with Binance, so they know who I am. The government could always audit them to find all of my trades.",
-                  "I just HoudiniSwap out of Binance and into a Trust wallet. Poof! I now feel like a true crypto basement warrior, thank you!",
-                ]}
-                name={"J. Mathew"}
+                para={["I use Houdini with almost every transfer."]}
+                name={"Noah C."}
                 img={review1}
                 stars={5}
               />
             </SplideSlide>
             <SplideSlide>
               <ReviewBox
-                para={[
-                  "Feels amazing to be free! I made 100+ trades last month, which could all be tied back to my gov’t ID from Crypto.com.",
-                  "Now, I HoudiniSwap out my KYC coins from Crypto.com into a MetaMask wallet so my trades are not tied to my IRL identity. Bye bye taxman. Everyone should be doing this!",
-                ]}
-                name={"Lara Sam"}
+                para={["HoudiniSwap is magical,", "poof :D"]}
+                name={"Lara S."}
                 img={review2}
                 stars={5}
               />
@@ -339,10 +331,9 @@ function Works() {
             <SplideSlide>
               <ReviewBox
                 para={[
-                  "Honestly f**k the government. I feel like I’m part of a quiet revolution whenever I use HoudiniSwap.",
-                  "I totally agree that anonymity and crypto should go hand in hand. You guys rock.",
+                  "First impression. I'm stop using Tornado, start using Houdini.",
                 ]}
-                name={"Smith James"}
+                name={"George P."}
                 img={review3}
                 stars={5}
               />
