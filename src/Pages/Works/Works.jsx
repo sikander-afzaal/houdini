@@ -1,8 +1,14 @@
-import React from "react";
+import "./Works.css";
+import { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import ReviewBox from "../../Components/ReviewBox/ReviewBox";
-import "./Works.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+
 import img from "../../Assets/works/works-bg.png";
 import imgMob from "../../Assets/works/mob-bg.png";
 import box1 from "../../Assets/works/box (1).png";
@@ -16,9 +22,63 @@ import review1 from "../../Assets/works/review (1).png";
 import review2 from "../../Assets/works/review (2).png";
 import review3 from "../../Assets/works/review (3).png";
 import blob from "../../Assets/tracking-illustration.png";
+import step3 from "../../Assets/step3.svg";
 import blobMob from "../../Assets/mob-ill.png";
 
 function Works() {
+  const STEPS__DATA = [
+    {
+      step: "Step 1",
+      head: "How To Swap",
+      desc: "Easy and Secure",
+    },
+    {
+      step: "Step 2",
+      head: "Choose the crypto swap pair",
+      desc: "Choose between any combination of cryptos.",
+    },
+    {
+      step: "Step 3",
+      head: "Input the amount to swap",
+      desc: "Wait while HoudiniSwap gathers rates from multiple exchanges and optimizes for the lowest cost.",
+    },
+    {
+      step: "Step 4",
+      head: "Input the receiving wallet address",
+      desc: "The receiving wallet address should match the address format of the receiving currency. For example, ETH address start with 0x...",
+    },
+    {
+      step: "Step 5",
+      head: "Send funds to address generated",
+      desc: "Open your personal wallet and send the funds to the address generated on the Order Page. For enhanced security, HoudiniSwap does not utilize a wallet connect.",
+    },
+    {
+      step: "Step 6",
+      head: "Done!",
+      desc: "On average, it takes 20-minutes for a swap to complete. Follow along progress on the Order Page.",
+    },
+    {
+      step: "Step 7",
+      head: "Still need help? Contact support.",
+      desc: "Our support team is available 24/7. Contact us anytime with questions, feedback, or ideas!",
+    },
+  ];
+  const [steps, setSteps] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (steps === STEPS__DATA.length - 1) {
+        setSteps(0);
+      } else {
+        setSteps((prev) => {
+          return prev + 1;
+        });
+      }
+    }, 4000);
+    return () => {
+      clearInterval(timer);
+    };
+  }, [steps]);
+
   return (
     <div className="homeWrapper">
       <div className="works">
@@ -139,6 +199,83 @@ function Works() {
             </p>
           </div>
           <img src={atom} className="shine" alt="" />
+        </div>
+
+        <div className="steps-div">
+          <div className="left-steps">
+            <div className="steps-desc">
+              <h3>{STEPS__DATA[steps].step}</h3>
+              <h2>{STEPS__DATA[steps].head}</h2>
+              <p>{STEPS__DATA[steps].desc}</p>
+            </div>
+            <div className="pagination">
+              {STEPS__DATA.map((elem, idx) => {
+                return (
+                  <div
+                    className={`page ${steps === idx ? "active-page" : ""}`}
+                  ></div>
+                );
+              })}
+            </div>
+            <div className="navigation">
+              <FontAwesomeIcon
+                onClick={() =>
+                  setSteps((prev) => {
+                    return prev - 1;
+                  })
+                }
+                icon={faChevronLeft}
+              />
+              <p>
+                {steps + 1}/{STEPS__DATA.length}
+              </p>
+              <FontAwesomeIcon
+                onClick={() =>
+                  setSteps((prev) => {
+                    return prev + 1;
+                  })
+                }
+                icon={faChevronRight}
+              />
+            </div>
+          </div>
+          <div className="right-steps">
+            {steps === 0 && (
+              <div className="bg-purple">
+                <img src={step3} alt="" />
+              </div>
+            )}
+            {steps === 1 && (
+              <div className="bg-purple">
+                <img src={step3} alt="" />
+              </div>
+            )}
+            {steps === 2 && (
+              <div className="bg-purple">
+                <img src={step3} alt="" />
+              </div>
+            )}
+            {steps === 3 && (
+              <div className="bg-purple">
+                <img src={step3} alt="" />
+              </div>
+            )}
+            {steps === 4 && (
+              <div className="bg-purple">
+                <img src={step3} alt="" />
+              </div>
+            )}
+            {steps === 5 && (
+              <div className="bg-purple">
+                <img src={step3} alt="" />
+              </div>
+            )}
+            {steps === 6 && (
+              <div className="bg-purple">
+                <img src={step3} alt="" />
+              </div>
+            )}
+          </div>
         </div>
         <div className="reviews">
           <img src={blob} alt="" className="blob" />

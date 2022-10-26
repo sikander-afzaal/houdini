@@ -25,7 +25,7 @@
 .left-home h1 {
   color: white;
   font-weight: 600;
-  font-size: 70px;
+  font-size: 48px;
 }
 .left-home p {
   font-weight: 400;
@@ -84,8 +84,8 @@
   flex-direction: column;
 }
 .col h1 {
-  font-weight: 500;
-  font-size: 48px;
+  font-weight: 700;
+  font-size: 40px;
   color: white;
 }
 .col h2 {
@@ -179,14 +179,15 @@
 }
 .swap-col h3 {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
   color: white;
+  margin-bottom: 5px;
 }
 .swap-col input {
   border: none;
   background-color: transparent;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 20px;
 }
 .swap-col input::placeholder {
   color: inherit;
@@ -220,15 +221,17 @@
   cursor: pointer;
 }
 .coin img {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
+  margin-right: 5px;
 }
 .coin h2 {
   color: white;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 500;
   user-select: none;
+  letter-spacing: 1px;
 }
 .coin svg {
   color: white;
@@ -236,7 +239,12 @@
 }
 .right-col p {
   color: white;
-  font-size: 16px;
+  font-size: 13px;
+  margin: 5px 25px 0 0;
+  letter-spacing: 1px;
+}
+#receiver-address::placeholder {
+  color: #fff5;
 }
 .abs-img {
   position: absolute;
@@ -248,6 +256,12 @@
   z-index: 2;
   cursor: pointer;
 }
+.abs-img:hover {
+  transform: translate(-50%, -52%);
+}
+.abs-img:active {
+  transform: translate(-50%, -50%);
+}
 .recieve {
   flex-direction: column;
   justify-items: center;
@@ -258,11 +272,11 @@
 }
 .recieve h2 {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
 }
 .recieve input {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 20px;
   background-color: transparent;
   color: white;
   border: none;
@@ -286,14 +300,26 @@
   border-radius: 100vh;
   border: none;
   background-color: white;
+  border: 1px solid white;
   color: black;
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 20px;
   cursor: pointer;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.swap-btn:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease;
+}
+#id-search {
+  display: flex;
+}
+#mobile-id-search {
+  display: none;
 }
 @media screen and (max-width: 1000px) {
   .homeWrapper {
@@ -306,6 +332,19 @@
   .left-home {
     align-items: center;
     text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  #id-search {
+    display: none;
+  }
+  #mobile-id-search {
+    display: flex;
+  }
+  .right-col p {
+    font-size: 12px;
+    margin: 5px 0 0 0;
+    letter-spacing: 0.3px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -343,5 +382,174 @@
   }
   .coin h2 {
     font-size: 18px;
+  }
+}
+
+theBall,
+.theBall-outer {
+  width: 20px;
+  height: 20px;
+}
+.theBall-outer {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  z-index: 9999999999999999999;
+  pointer-events: none !important;
+}
+.theBall {
+  position: absolute;
+  background-color: rgba(255, 114, 114, 0.8);
+  border-radius: 50%;
+  -webkit-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center center;
+}
+.zooming.theBall {
+  background-color: #ff7272;
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+}
+
+/*---------------------------------------------------------------------
+                        Mouse Effect
+-----------------------------------------------------------------------*/
+.mouse-move {
+  position: absolute;
+  bottom: -130px;
+  left: 50%;
+  width: 65px;
+  margin-left: -50px;
+}
+.mouse-move a {
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 65px;
+  width: 65px;
+  line-height: 65px;
+  display: inline-block;
+  border-radius: 900px;
+  text-align: center;
+}
+.mouse-move .boom::before,
+.mouse-move .boom::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.mouse-move .boom::before,
+.mouse-move .boom::after {
+  content: "";
+  z-index: -1;
+  margin: 0;
+  border-radius: 900px;
+  box-shadow: inset 0 0 0 2px;
+  animation: clipMe 8s linear infinite;
+}
+.mouse-move .boom::before {
+  animation-delay: -4s;
+}
+@keyframes clipMe {
+  0%,
+  100% {
+    clip: rect(0px, 220px, 2px, 0px);
+  }
+  25% {
+    clip: rect(0px, 2px, 220px, 0px);
+  }
+  50% {
+    clip: rect(218px, 220px, 220px, 0px);
+  }
+  75% {
+    clip: rect(0px, 220px, 220px, 218px);
+  }
+}
+.banner_canvas {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  bottom: 0px;
+}
+.home * {
+  pointer-events: auto;
+}
+.warning-alert {
+  color: red;
+  position: absolute;
+  bottom: 5px;
+  left: 22px;
+  font-weight: 600;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+.warning-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.spinner {
+  width: 80px;
+  text-align: center;
+  align-items: center;
+}
+
+.spinner > div {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #191914;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+  background-color: #2093ed;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  background-color: #ff2b63;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }

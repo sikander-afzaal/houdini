@@ -24,9 +24,9 @@ function App() {
 
       <Routes>
         <Route element={<Home />} path="/" />
-        <Route element={<TrackingInformation />} path="/track" />
+        <Route element={<TrackingInformation />} path="/order/:orderId" />
         <Route element={<StakeSpoof />} path="/stake" />
-        <Route element={<Works />} path="/works" />
+        <Route element={<Works />} path="/How-it-works" />
       </Routes>
       <Footer />
     </div>

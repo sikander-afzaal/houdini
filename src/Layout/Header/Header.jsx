@@ -32,18 +32,19 @@ function Header() {
             onClick={() => {
               setHeader(false);
             }}
-            to={"/works"}
+            to={"/How-it-works"}
           >
             How it works
           </Link>
           <div
             className={`drop-down`}
             onClick={() => {
-              setOpenDrop((prev) => !prev);
+              // setOpenDrop((prev) => !prev);
             }}
+            style={{ opacity: 0.3 }}
           >
             <p>
-              $POOF <FontAwesomeIcon icon={faChevronDown} />
+              $POOF (coming soon) <FontAwesomeIcon icon={faChevronDown} />
             </p>
             <div className={`main-drop ${openDrop && "open-drop"}`}>
               <Link

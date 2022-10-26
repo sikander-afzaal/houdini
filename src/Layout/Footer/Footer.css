@@ -4,6 +4,9 @@
   justify-content: center;
   align-items: center;
   padding-inline: 20px;
+  z-index: 10;
+  pointer-events: none;
+  position: relative;
 }
 .footer {
   display: flex;
@@ -14,6 +17,10 @@
   width: 100%;
   padding: 30px 0px;
   max-width: 1400px;
+  pointer-events: none;
+}
+.footer * {
+  pointer-events: auto;
 }
 .footer .row {
   display: flex;

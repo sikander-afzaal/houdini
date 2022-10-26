@@ -5,10 +5,17 @@
   width: 100%;
   padding-inline: 20px;
   height: 155px;
+  position: relative;
+  z-index: 999;
+  pointer-events: none;
 }
+
 .header img {
   max-width: 209px;
   object-fit: contain;
+}
+.header * {
+  pointer-events: auto;
 }
 .header {
   max-width: 1400px;
@@ -16,6 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
 }
 .right-header {
   display: flex;
