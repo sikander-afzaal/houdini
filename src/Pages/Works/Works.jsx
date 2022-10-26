@@ -221,7 +221,11 @@ function Works() {
               <FontAwesomeIcon
                 onClick={() =>
                   setSteps((prev) => {
-                    return prev - 1;
+                    if (prev === 0) {
+                      return 6;
+                    } else {
+                      return prev - 1;
+                    }
                   })
                 }
                 icon={faChevronLeft}
@@ -232,7 +236,11 @@ function Works() {
               <FontAwesomeIcon
                 onClick={() =>
                   setSteps((prev) => {
-                    return prev + 1;
+                    if (prev === 6) {
+                      return 0;
+                    } else {
+                      return prev + 1;
+                    }
                   })
                 }
                 icon={faChevronRight}

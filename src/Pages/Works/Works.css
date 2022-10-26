@@ -214,8 +214,8 @@
   margin-top: 30px;
 }
 .navigation svg {
-  background-color: white;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
   width: 40px;
   border-radius: 5px;
   height: 40px;
@@ -229,7 +229,7 @@
 }
 .bg-purple {
   padding: 40px;
-  background-color: lightgray;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   width: 100%;
   animation: anim-right 1s ease 0s forwards;
